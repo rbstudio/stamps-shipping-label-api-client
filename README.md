@@ -24,8 +24,8 @@ $from = (new \Slicvic\Stamps\Address\Address)
     ->setCountry('US');
 
 try {
-    $shippingLabel = (new \Slicvic\Stamps\Api\ShippingLabel)
-        ->setApiUrl('API_URL') // Leave out for default
+    $shippingLabel = new \Slicvic\Stamps\Api\ShippingLabel('API_URL');
+    $shippingLabel
         ->setApiIntegrationId('YOUR_API_INTEGRATION_ID')
         ->setApiUserId('YOUR_API_USER_ID')
         ->setApiPassword('YOUR_API_PASSWORD')

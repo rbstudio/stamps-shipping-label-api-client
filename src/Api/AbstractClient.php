@@ -37,9 +37,9 @@ abstract class AbstractClient implements ClientInterface
     /**
      * @throws \Exception
      */
-    public function __construct()
+    public function __construct($apiUrl)
     {
-        $this->soapClient = new SoapClient($this->apiUrl, [
+        $this->soapClient = new SoapClient($apiUrl, [
             'exceptions' => true
         ]);
     }

@@ -84,9 +84,9 @@ class ShippingLabel extends AbstractClient implements ShippingLabelInterface
     /**
      * {@inheritdoc}
      */
-    public function __construct()
+    public function __construct($apiUrl)
     {
-        parent::__construct();
+        parent::__construct($apiUrl);
         $this->imageType = self::IMAGE_TYPE_PNG;
         $this->packageType = self::PACKAGE_TYPE_THICK_ENVELOPE;
         $this->serviceType = self::SERVICE_TYPE_FC;
